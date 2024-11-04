@@ -367,6 +367,58 @@ print(result)
 그럼 위에 있는 것을 활용하여 나만의 것을 만들어보자.
 
 
+coffee="""
+  카페 관리자 모드
+  1. 메뉴 보기
+  2. 메뉴 추가
+  3. 메뉴 삭제
+  4. 메뉴 이름 바꾸기
+  5. 관리자모드 종료
+"""
+mm=['치킨','피자','떡볶이']
+
+def bo():
+        for i in range(len(mm)):
+            print(f"{i}.",mm[i])
+
+def new():
+    bo()
+    a = input("추가하시려는 메뉴를 선택해주세요.")
+    mm.append(a)
+    bo()
+
+def del_():
+    bo()
+    a = int(input("삭제하려는 메뉴의 숫자를 입력해주세요."))
+    mm.remove(mm[a])
+    bo()   
+
+def name():
+    bo()
+    a = int(input("바꾸려는 메뉴의 숫자를 입력해주세요."))
+    b = input("이름을 작성해주세요.")
+    mm[a] = b
+    bo()
+    
+while True:
+   print(coffee)
+   a = int(input("사용하고싶은 기능의 숫자를 입력해주세요."))
+   
+   if a == 1:
+        bo()
+   elif a == 2:
+       new()
+   elif a == 3:
+       del_()
+   elif a == 4:
+       name()
+   elif a == 5:
+           print("관리자 모드를 종료하겠습니다.")
+           break
+   else:
+      print("번호를 다시 선택해주세요.")
+    
+
 
 
 
