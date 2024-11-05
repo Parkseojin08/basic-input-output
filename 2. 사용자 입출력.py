@@ -61,9 +61,28 @@ print("my"+"life"+"is"+"python")  # 2번
 mylifeispython
 
 => 공백을 추가하려면
-print("my"," life"," is"," python")
+print("my","life","is","python")
 my life is python
+또는
+print("my ""life ""is ""python")
 이런식으로 문자에 공백을 넣으면 된다.
+
+한 줄에 결괏값 출력하기
+for 문을 공부할 때 만들었던 구구단 프로그램에서 보았듯이 한 줄에 결괏값을 계속 이어서 출력하려면 
+매개변수 end를 사용해 끝 문자를 지정해야 한다.
+
+for i in range(10):
+    print(i, end=' ')
+0 1 2 3 4 5 6 7 8 9
+end 매개변수의 초깃값은 줄바꿈(\n) 문자이다.
+
+
+
+
+
+
+
+
 
 
 
